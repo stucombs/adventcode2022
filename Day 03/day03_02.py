@@ -30,21 +30,21 @@ def pointConversion(char):
 	"""
 	return ALPHA_POINTS[char];
 
+# MAIN SCRIPT
 counter = 0;
 groups = rf.read().splitlines();
 curr_group = [];
 
-if __name__ == '__main__':
-	for pos,group in enumerate(groups):
-		if(counter < 2):
-			curr_group.append(group);
-			counter = counter + 1;
-		else:
-			curr_group.append(group);
-			common = findCommon(curr_group[0], curr_group[1], curr_group[2]);
-			badge_total += pointConversion(common);
-			curr_group = [];	
-			counter = 0;
+for pos,group in enumerate(groups):
+	if(counter < 2):
+		curr_group.append(group);
+		counter = counter + 1;
+	else:
+		curr_group.append(group);
+		common = findCommon(curr_group[0], curr_group[1], curr_group[2]);
+		badge_total += pointConversion(common);
+		curr_group = [];	
+		counter = 0;
 
-	print(f"ANSWER: {badge_total}");
-	rf.close();
+print(f"ANSWER: {badge_total}");
+rf.close();

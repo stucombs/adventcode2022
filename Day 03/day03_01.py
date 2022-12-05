@@ -25,12 +25,13 @@ def pointConversion(char):
 	"""
 	return ALPHA_POINTS[char];
 
-if __name__ == '__main__':
-	for line in rf.read().splitlines():
-		index_split = int(len(line) / 2);
-		left, right = line[:index_split], line[index_split:];
-		commonChar = findCommon(left, right);
-		ruck_total += pointConversion(commonChar);
 
-	rf.close();
-	print(f"ANSWER: {ruck_total}");
+# MAIN SCRIPT
+for line in rf.read().splitlines():
+	index_split = int(len(line) / 2);
+	left, right = line[:index_split], line[index_split:];
+	commonChar = findCommon(left, right);
+	ruck_total += pointConversion(commonChar);
+
+rf.close();
+print(f"ANSWER: {ruck_total}");
