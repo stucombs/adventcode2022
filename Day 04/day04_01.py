@@ -31,4 +31,5 @@ for line in rf.read().splitlines():
 	elif compareSection(listSection2,listSection1):
 		total_overlap += 1;
 
+rf.close();
 print(f"ANSWER: {total_overlap}");
