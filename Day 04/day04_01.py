@@ -4,6 +4,11 @@ rf = open(INPUT_FILE,'r');
 
 def compareSection(section1, section2):
 	"""
+		Returns True if section1 fully encompases section2
+		:param section1: str
+		:param section2: str
+
+		:return boolean
 	"""
 	if int(section1[0]) <= int(section2[0]) and int(section1[1]) >= int(section2[1]):
 		return True;
@@ -12,6 +17,11 @@ def compareSection(section1, section2):
 
 def splitSection(section1,section2):
 	"""
+		Split two "section"s by hypen and return the 
+		:param section1: str
+		:param section2: str
+
+		:return str, str
 	"""
 	section1 = section1.split('-');
 	section2 = section2.split('-');
